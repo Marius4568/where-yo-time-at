@@ -5,6 +5,15 @@ import { formValidation } from "./formValidation.js"
 
 barba.init({
 
+  // transitions: [{
+  //   name: 'home-enter-transition',
+  //   enter(data) {
+  //     if(data.current.namespace === "home"){
+  //       animations.pageTransitionEnter();
+  //     }
+  //   }
+  // }],
+
   views: [{
     namespace: 'home',
 
@@ -46,7 +55,6 @@ barba.init({
     },
 
     beforeEnter(data) {
-      
       animations.pageTransitionEnter()
     },
 
