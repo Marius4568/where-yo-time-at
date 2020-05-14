@@ -469,6 +469,11 @@ align-items: center;
     align-items: flex-start;
     width: 90%;
 }
+
+.firstq-wrap-mob {
+margin-top: 50px;
+}
+
 .text-input-style-mob {
     width: 40%;
     font-size: 14px;
