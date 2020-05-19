@@ -15,14 +15,12 @@
       let tl = gsap.timeline();
       // tl.from(".preloader", {duration: 0.3, opacity: 0});
       // tl.from(".transition-div", {duration: 1, opacity: 0});
-      tl.from(".unaffected-div", {duration: 1, opacity: 0, translateX: -100});
+      tl.from(".unaffected-inner", {duration: 1, opacity: 0, translateX: -100});
      },
 
-   nextBtnAppearAnimation: function nextBtnAppearAnimation() {gsap.fromTo(".next-btn", {autoAlpha: 0}, {autoAlpha: 1, duration: 0.3})},
+   nextBtnAppearAnimation: function nextBtnAppearAnimation() {gsap.fromTo(".arrow-btn1", {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1})},
 
-   nextBtnDisappearAnimation: function nextBtnDisappearAnimation() {gsap.to(".next-btn", 0.3, {autoAlpha: 0, })}
+   nextBtnDisappearAnimation: function nextBtnDisappearAnimation() {
+      gsap.fromTo(".arrow-btn1", {autoAlpha: 1}, {duration: 0.1, autoAlpha: 0})}
+
 }
-
-
-
- 

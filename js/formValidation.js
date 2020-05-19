@@ -15,12 +15,19 @@ export let formValidation = {
       },
       
     showNextIfFormComplete:  function showNextIfFormComplete(e) {
+        // let leftSection = document.querySelector(".left-section");
         let nextBtn = document.querySelector(".arrow-btn1");
         let activityInput = document.querySelector(".firstq-text-input");
+        let spaceHolderNextBtn = document.querySelector(".space-holder-for-arrow1");
       
-            if(formValidation.areThereTrueValues(document.querySelectorAll(".option")) && activityInput.value !== "" && calculations.howManyInputsFilled() > 2) {
-              animations.nextBtnAppearAnimation()
-              nextBtn.style.display = "flex";
+            if(formValidation.areThereTrueValues(document.querySelectorAll(".input-red")) && activityInput.value !== "" && calculations.howManyInputsFilled() > 2) {
+
+              if(nextBtn.style.visibility === "inherit" || nextBtn.style.visibility === "visible" || nextBtn.style.visibility === "initial") {
+                return 0
+              }
+                  animations.nextBtnAppearAnimation()
+                  spaceHolderNextBtn.style.display = "none";
+                  nextBtn.style.display = "inline-block";
 
 
             ///////Local storage handling//////////////////////////
@@ -63,10 +70,11 @@ export let formValidation = {
                })
                /////////////////////////////////////////////////////   
                 
-              
             } else {
-              animations.nextBtnDisappearAnimation();
-           
+              if(nextBtn.style.visibility === "hidden") {
+                return 0
+              }
+              animations.nextBtnDisappearAnimation()
             }
         
           }

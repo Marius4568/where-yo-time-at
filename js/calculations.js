@@ -12,7 +12,7 @@ export let calculations = {
 
     getUnitAndFrequency() {
         let arr = [];
-          document.querySelectorAll(".option").forEach(el => {
+          document.querySelectorAll(".input-red").forEach(el => {
             if(el.value !== ""){arr.push(el.id, el.value);}
           });
         

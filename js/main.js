@@ -2,7 +2,6 @@ import { animations } from "./animations.js";
 // import { calculations } from "./calculations.js";
 import { formValidation } from "./formValidation.js"
 
-
 barba.init({
 
   // transitions: [{
@@ -23,9 +22,9 @@ barba.init({
         document.querySelector("form").addEventListener(evt, formValidation.showNextIfFormComplete, true)  
     );
 
-   document.querySelector(".third-options-wrap").addEventListener("focus", (e) => {
+   document.querySelector("#thirdq-wrap").addEventListener("focus", (e) => {
 
-     document.querySelectorAll(".option").forEach(el => {
+     document.querySelectorAll(".input-red").forEach(el => {
        if(el !== e.target) {
          el.setAttribute("disabled", true)
          el.parentElement.classList.add("disabled");
@@ -35,9 +34,9 @@ barba.init({
    }, true)
 
 
- document.querySelector(".third-options-wrap").addEventListener("blur", (e) => {
+ document.querySelector("#thirdq-wrap").addEventListener("blur", (e) => {
 
-     document.querySelectorAll(".option").forEach(el => {
+     document.querySelectorAll(".input-red").forEach(el => {
        if(e.target.value === "") {
          el.removeAttribute("disabled")
          el.parentElement.classList.remove("disabled");
@@ -100,17 +99,10 @@ document.querySelector(".activity-placeholder").textContent = capitalize(locStor
 createAndRenderElements();
 
 
-let queryRandomImg = `https://source.unsplash.com/1600x900/?${JSON.parse(localStorage.getItem("formData")).activity}`
+let queryRandomImg = `https://source.unsplash.com/1600x900/?${JSON.parse(localStorage.getItem("formData")).activity}`;
 
-let resultsBgImg = document.querySelector(".results-bg-img").setAttribute("src", queryRandomImg);
-
-
-
-document.querySelector(".effect-div").style.background = `url("${queryRandomImg}")`
-
-    
-   
-          
+document.querySelector(".results-bg-img").setAttribute("src", queryRandomImg);
+       
     },
 
     afterEnter(data) {
@@ -118,14 +110,13 @@ document.querySelector(".effect-div").style.background = `url("${queryRandomImg}
       isImageFinishedLoading();
 
       
-      // document.querySelector(".effect-div").style.background = `url("${queryRandomImg}")`;
      
       function isImageFinishedLoading(){
 
         if(document.querySelector(".results-bg-img").complete) {
 console.log("finished");
           
-      document.querySelector(".effect-div").style.background = `https://source.unsplash.com/1600x900/?${JSON.parse(localStorage.getItem("formData")).activity}`;
+     
           
       
       

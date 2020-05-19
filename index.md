@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="./yin-yan.ico" type="image/x-icon">
-        <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./new.css">
         <title>Where Your Time Goes</title>
     </head>
     <body data-barba="wrapper">
@@ -79,7 +80,7 @@
                 </div>
                 <script src="https://unpkg.com/@barba/core"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-                <script type = "module" src="./main.js"></script>
+                <script type = "module" src="./js/main.js"></script>
             </div>
         </div>
     </body>
